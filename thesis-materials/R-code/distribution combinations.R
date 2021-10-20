@@ -2,6 +2,20 @@ sigma <- c(sqrt(0.75), sqrt(13.25))
 p <- c(0.98, 0.02)
 mu <- c(0,0)
 
+sigma2 <- c(sqrt(3), sqrt(53))
+p <- c(0.98, 0.02)
+mu <- c(0,0)
+s2 = rnormm(100000, p, mu, sigma)
+mean(s2)
+sd(s2)
+
+sigma4 <- c(sqrt(12), sqrt(212))
+p <- c(0.98, 0.02)
+mu <- c(0,0)
+s2 = rnormm(100000, p, mu, sigma)
+mean(s2)
+sd(s2)
+
 n = 10000
 x1 = rnormm(n, p, mu, sigma)
 sd(x1)
@@ -25,9 +39,9 @@ for(i in 1:10000) {
   
   #s1 = rnormm(n1, p, mu, sigma)
   #s1= rnorm(n1,0,1)
-  s1 = rnormm(n1, p, mu, sigma)
-  s2 = rnormm(n2, p, mu, sigma)
-  s3 = rnormm(n3, p, mu, sigma)
+  s1 = runif(n3,-sqrt(3),sqrt(3))
+  s2 = rnorm(n1,0,4)
+  s3 = rnormm(n2, p, mu, sigma2)
   #s2 = rnormm(n1, p, mu, sigma)
   #s3 = rnormm(n3, p, mu, sigma)
   #s3 = runif(n2,-sqrt(3),sqrt(3))
