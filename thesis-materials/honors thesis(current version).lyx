@@ -534,66 +534,103 @@ Chapter 3 - Results
 \end_layout
 
 \begin_layout Standard
-This is how you insert a figure:
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename ../../../Downloads/MarceloThesis-1d967b7a595e2268d8879b85e5825bdfdd1b6260/thesis materials/Figures/example_graph.png
-	scale 75
-	rotateOrigin center
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Write a caption for the figure 
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:label-for-graph"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Then you can label the figure and use Insert>Cross-reference to refer to
- it, see Figure 
+The conditions across 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:label-for-graph"
+reference "tab:exp set 1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ contained simulations drawn from a population of 10,000.
+ Then, distinct test cases applied to a two-stage procedure, and an analysis
+ of variance (ANOVA) were used in order to test the robustness of each test
+ under different constraints.
+ All experiments utilized variations of a normal, mix-normal, and uniform
+ distributions which were used as additional alternatives to measure differences
+ in p-values across a two-sage and ANOVA test.
+ 
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, the first iteration of exploring these contraints is established by appyling
+ varying sample sizes across each distribution used.
+ It is important to note that a standard deviation of 1 remained consistent
+ throughout all the experiments.
+ Across both the two-stage and the ANOVA, each test fell within the bounds
+ of an approximate p-value of 0.05.
+ This is exemplified in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diff-Sample-Sizes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ in which the respective p-values of each test have minimal deviations from
+ eachother.
+ 
+\end_layout
+
+\begin_layout Standard
+This is unlike the results seen in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which indicate a more drastic juxtaposition between the respective p-values
+ of the two-stage vs ANOVA.
+ The sample size used remained as 
+\begin_inset Formula $n=20$
+\end_inset
+
+ for all experiments, but included variations in the standard deviation
+ within each distribution.
+ Using standard deviations ranging from 1,2, and 4 through normal, mix-normal,
+ and uniform distributions widened the difference in p-values unlike seen
+ in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 1"
 plural "false"
 caps "false"
 noprefix "false"
@@ -601,9 +638,60 @@ noprefix "false"
 \end_inset
 
 .
+ Notably in experiments 5 and 6, the p-value for the two-stage procedure
+ falls outside the 0.75 acceptable bound value established.
+ This is also consistent in experiments 1,8 and 9 which fall under the 0.25
+ bound.
+ 
 \end_layout
 
 \begin_layout Standard
+Increasing the condition variables in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with respect to including combinations of varying sample sizes and standard
+ deviations among each distribution, demonstrated relative consistency between
+ the two-stage and ANOVA tests despite instances like experiment 1-4, or
+ 7-9 in which they fall outside the acceptable boundaries.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Applied same standard deviations, but varied sample sizes across 3 samples
+ drawn from a normal, uniform, and mix-normal distribution.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:exp set 1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="6">
 <features tabularvalignment="middle">
@@ -1340,6 +1428,60 @@ mixed norm
 
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Test Cases With Different Sample Sizes 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diff-Sample-Sizes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename R-code/difSamplesFigure.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
@@ -1347,15 +1489,15 @@ mixed norm
 
 \end_layout
 
-\begin_layout Subsection
-All sample sizes are 
-\begin_inset Formula $n=20$
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="11" columns="6">
 <features tabularvalignment="middle">
@@ -2094,19 +2236,23 @@ M
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-different sample sizes and standard deviation
+Derived different standard deviations across a uniform, normal, and mixed-normal
+ distributions.
+ Sample sizes across all test cases remain as 
+\begin_inset Formula $n=20$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:exp set 2"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2115,6 +2261,64 @@ different sample sizes and standard deviation
 \end_layout
 
 \begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Test Cases With Same Sample Sizes, But Different Standard Deviations 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Same-Sample-Sizes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename R-code/sampleSamplesFigure.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="17" columns="6">
 <features tabularvalignment="middle">
@@ -2198,7 +2402,7 @@ U
 \begin_inset Formula $\sigma=1$
 \end_inset
 
- (s=10)
+, n=10
 \end_layout
 
 \end_inset
@@ -2211,7 +2415,7 @@ N
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-(s=20)
+, n=20
 \end_layout
 
 \end_inset
@@ -2224,7 +2428,7 @@ M
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-(s=30)
+, n=30
 \end_layout
 
 \end_inset
@@ -2266,7 +2470,7 @@ U
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-(s=20
+, n=20
 \end_layout
 
 \end_inset
@@ -2279,7 +2483,7 @@ N
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-(s=30)
+, n=30
 \end_layout
 
 \end_inset
@@ -2292,7 +2496,7 @@ M
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-(s=10)
+ n=10
 \end_layout
 
 \end_inset
@@ -2334,7 +2538,7 @@ U
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-(s=30)
+, n=30
 \end_layout
 
 \end_inset
@@ -2360,7 +2564,7 @@ M
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-(s=20)
+, n=20
 \end_layout
 
 \end_inset
@@ -2402,7 +2606,7 @@ U
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-
+ n=10
 \end_layout
 
 \end_inset
@@ -2415,7 +2619,7 @@ N
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-
+, n=20
 \end_layout
 
 \end_inset
@@ -2428,7 +2632,7 @@ M
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-
+, n=30
 \end_layout
 
 \end_inset
@@ -2470,7 +2674,7 @@ U
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-
+, n=20
 \end_layout
 
 \end_inset
@@ -2483,7 +2687,7 @@ N
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-
+, n=30
 \end_layout
 
 \end_inset
@@ -2496,7 +2700,7 @@ M
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-
+, n=10
 \end_layout
 
 \end_inset
@@ -2538,7 +2742,7 @@ U
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-
+, n=30
 \end_layout
 
 \end_inset
@@ -2551,7 +2755,7 @@ N
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-
+, s=10
 \end_layout
 
 \end_inset
@@ -2564,7 +2768,7 @@ M
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-
+, n=20
 \end_layout
 
 \end_inset
@@ -2606,7 +2810,7 @@ U
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-
+, n=10
 \end_layout
 
 \end_inset
@@ -2619,7 +2823,7 @@ N
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-
+, n=20
 \end_layout
 
 \end_inset
@@ -2632,7 +2836,7 @@ M
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-
+, n=30
 \end_layout
 
 \end_inset
@@ -2674,7 +2878,7 @@ U
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-
+, n=20
 \end_layout
 
 \end_inset
@@ -2687,7 +2891,7 @@ N
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-
+ n=30
 \end_layout
 
 \end_inset
@@ -2700,7 +2904,7 @@ M
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-
+, n=10
 \end_layout
 
 \end_inset
@@ -2742,7 +2946,7 @@ U
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-
+, n=30
 \end_layout
 
 \end_inset
@@ -2755,7 +2959,7 @@ N
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-
+, n=10
 \end_layout
 
 \end_inset
@@ -2768,7 +2972,7 @@ M
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-
+, n=20
 \end_layout
 
 \end_inset
@@ -2810,7 +3014,7 @@ U
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-(s=10)
+, n=10
 \end_layout
 
 \end_inset
@@ -2823,7 +3027,7 @@ N
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-(s=20)
+, n=20
 \end_layout
 
 \end_inset
@@ -2836,7 +3040,7 @@ M
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-(s=30)
+, n=30
 \end_layout
 
 \end_inset
@@ -2878,7 +3082,7 @@ U
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-(s=20)
+, n=20
 \end_layout
 
 \end_inset
@@ -2891,7 +3095,7 @@ N
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-(s=30)
+, n=30
 \end_layout
 
 \end_inset
@@ -2904,7 +3108,7 @@ M
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-(s=10)
+, n=10
 \end_layout
 
 \end_inset
@@ -2946,7 +3150,7 @@ U
 \begin_inset Formula $\sigma=1$
 \end_inset
 
-(s=30)
+, n=30
 \end_layout
 
 \end_inset
@@ -2959,7 +3163,7 @@ N
 \begin_inset Formula $\sigma=4$
 \end_inset
 
-(s=10)
+, n=10
 \end_layout
 
 \end_inset
@@ -2972,7 +3176,7 @@ M
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-(s=20)
+, n=20
 \end_layout
 
 \end_inset
@@ -3237,10 +3441,78 @@ U
 \end_inset
 
 
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Applied combinations of varied sample sizes and standard deviations across
+ the uniform, mix-normal, and normal distributions.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:exp set 3"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename R-code/comboSizeSDFigure.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Different Sample Sizes and Standard Deviations 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Combo-Size-SD"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
 
 \end_layout
 
