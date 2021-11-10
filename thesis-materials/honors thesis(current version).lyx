@@ -479,6 +479,16 @@ if
  The data offered by the simulation is not derived from any actual data
  set, rather it is a generation of random numbers that is renewed upon each
  time the function is run.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+make sure to mention that the mean was 0 across the population.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -571,11 +581,13 @@ noprefix "false"
  All experiments utilized variations of a normal, mix-normal, and uniform
  distributions which were used as additional alternatives to measure differences
  in p-values across a two-sage and ANOVA test.
- 
+ The Bradley criteria established the 0.075 and 0.025 boundaries throughout
+ the figures as a means of denoting the performance of the two-stage and
+ ANOVA procedure.
 \end_layout
 
 \begin_layout Standard
-In 
+In Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:exp set 1"
@@ -587,11 +599,56 @@ noprefix "false"
 
 , the first iteration of exploring these contraints is established by appyling
  varying sample sizes across each distribution used.
+ Each experiment had one sample drawn from the uniform distribution, the
+ mixed-normal distribution, and the normal distribution while the sample
+ sizes across each experiment were 10, 20, 30.
  It is important to note that a standard deviation of 1 remained consistent
  throughout all the experiments.
- Across both the two-stage and the ANOVA, each test fell within the bounds
- of an approximate p-value of 0.05.
- This is exemplified in 
+ Experiment 1 draws from a uniform distribution with sample size 10, a normal
+ distribution with sample size 20, and a mixed-normal distribution with
+ sample size 30 which resulted in p-values of 0.0604 and 0.0513 from the two-stage
+ procedure and ANOVA respectively.
+ Similar results stem from experiment 2 which determined p-values of 0.0528
+ from the two-stage and 0.0513 from the ANOVA across a uniform distribution
+ of sample size 10, a mixed-normal distribution with sample size 20, and
+ a normal distribution of sample size 30.
+ Experiment 3 used a combination of a normal distribution with sample size
+ 10 (
+\begin_inset Formula $n=10)$
+\end_inset
+
+, a uniform distribution with 
+\begin_inset Formula $n=20,$
+\end_inset
+
+and a mixed-normal distribution with 
+\begin_inset Formula $n=30$
+\end_inset
+
+ which determined a two-stage p-value of 0.0518 and an ANOVA p-value of 0.0573.
+ This trend of approximate p-values hovering around 0.05 with minimal deviations
+ from each two-stage procedure and ANOVA is consistent up until experiment
+ 6 which is the point at which the combinations of norma distributions,
+ mixed-normal distributions, and uniform distributions with varying sample
+ sizes ceases.
+ Experiment 7 considers uniform distributions across all 3 samples each
+ with a sample size of 10,20, and 30 respectively which resulted in a two-stage
+ p-value of 0.0508 and an ANOVA p-value of 0.0533.
+ The process of selecting the same distributions across all 3 samples was
+ used in experiment 8 and 9 as well in which experiment 8 drew from normal
+ distribution while experiment 9 used the mixed-normal distribution.
+ Experiment 8 garned a p-value of 0.0480 for its two-stage procedure while
+ the ANOVA resulted with a p-value of 0.0491.
+ Experiment 9 experienced similar results with its mixed-normal distributions
+ despite variations of sample sizes 
+\begin_inset Formula $n=10,n=20,n=30$
+\end_inset
+
+ in samples 1, 2, and 3 respectively which concluded in a two-sage p-value
+ of 0.0502 and an ANOVA p-value of 0.0508.
+ Overall, each test throughout all experiments fell within the ounds of
+ an approximate p-value of 0.05.
+ This is further exemplified in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Diff-Sample-Sizes"
@@ -602,72 +659,32 @@ noprefix "false"
 \end_inset
 
  in which the respective p-values of each test have minimal deviations from
- eachother.
- 
+ eachother and none indicate signficant having outliers that fall outside
+ the Bradley criteria.
 \end_layout
 
 \begin_layout Standard
-This is unlike the results seen in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:exp set 2"
-plural "false"
-caps "false"
-noprefix "false"
+\begin_inset Note Note
+status open
 
-\end_inset
-
-, which indicate a more drastic juxtaposition between the respective p-values
- of the two-stage vs ANOVA.
- The sample size used remained as 
-\begin_inset Formula $n=20$
-\end_inset
-
- for all experiments, but included variations in the standard deviation
- within each distribution.
- Using standard deviations ranging from 1,2, and 4 through normal, mix-normal,
- and uniform distributions widened the difference in p-values unlike seen
- in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:exp set 1"
-plural "false"
-caps "false"
-noprefix "false"
-
-\end_inset
-
-.
- Notably in experiments 5 and 6, the p-value for the two-stage procedure
- falls outside the 0.75 acceptable bound value established.
- This is also consistent in experiments 1,8 and 9 which fall under the 0.25
- bound.
- 
+\begin_layout Plain Layout
+for each of 1,5,6,8,9.
+ Write down what the values were and what the popluations were.
+ what population is causing large or small p values.
+ Add several sentences describing everyting in words mention the bradley
+ criteria..
 \end_layout
 
-\begin_layout Standard
-Increasing the condition variables in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:exp set 3"
-plural "false"
-caps "false"
-noprefix "false"
-
 \end_inset
 
- with respect to including combinations of varying sample sizes and standard
- deviations among each distribution, demonstrated relative consistency between
- the two-stage and ANOVA tests despite instances like experiment 1-4, or
- 7-9 in which they fall outside the acceptable boundaries.
- 
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1441,7 +1458,7 @@ mixed norm
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1480,6 +1497,90 @@ name "fig:Diff-Sample-Sizes"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+This is unlike the results seen in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, which indicate a more drastic juxtaposition between the respective p-values
+ of the two-stage vs ANOVA.
+ The sample size used remained as 
+\begin_inset Formula $n=20$
+\end_inset
+
+ for all experiments, but included variations in the standard deviation
+ within each distribution.
+ Using standard deviations ranging from 1, 2, and 4 through normal, mix-normal,
+ and uniform distributions widened the difference in p-values unlike seen
+ in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Consider experiment 1 in which sample 1 drew from a uniform distribution
+ with standard deviation 1(
+\begin_inset Formula $\sigma=1)$
+\end_inset
+
+, sample 2 from a normal distribution with standard deviation 2, and sample
+ 3 from a mixed-normal distribution with standard deviation 4.
+ This resulted in a two-stage procedure containing a drastic p-value of
+ 0.0231 compared to the ANOVA with a 0.0633 p-value.
+ This is a notable difference to the previous trend of p-values with minimal
+ deviations from the standard expected error rate of 0.05, in this case,
+ the two-stage value falls just outside the explicit boundaries of the Bradley
+ criteria.
+ A similar result of a small two-stage p-value is followed in experiment
+ 2 which contained a value of 0.0287 while the ANOVA had a much higher result
+ of a 0.0704 p-value.
+ Unlike the previous tests so far, experiment 3 demonstrated a closer p-value
+ relationship with 0.0537 and 0.0681 values for the two-stage and ANOVA respective
+ly with a uniform distribution of standard deviation 2, a normal distribution
+ of standard deviation 4, and a mixed-normal distribution of standard deviation
+ 1.
+ Once more in experiment 4, the stark contrast between tests is established
+ with a lower two-stage p-value of 0.0358 as opposed to the ANOVA with a
+ 0.0626 p-value.
+ Altough there have been an increase in signicant gaps between the resulting
+ p-values , they have not yet fallen outside the specified Bradley criteria
+ which emphasizes that error rates should be maintianed between values of
+ 0.075 and 0.025.
+ Experiment 5 is the first instance that demonstrates the largest anomoly
+ between the ANOVA and two-stage tests through the use of a uniform distribution
+ of standard deviation 2 in sample 1, a normal distribution of standard
+ deviation 1 in sample 2, and a mixed-normal distribution of standard deviation
+ 4 in sample 3 which resulted in an ANOVA p-value of 0.0670 compared to the
+ much larger p-value of 0.1342 from the two-stage.
+ Exeriment 6 continues to reflect this through a high two-stage result of
+ 0.1445 while the ANOVA p-value was much less resulting in 0.0703, both of
+ these values stem from a combination of a uniform distribution with standard
+ deviation 4, a normal distribution with standard deviation 2, and a mixed-norma
+l distribution with standard deviation 1.
+ The two stage p-values in experiments 7-9 in turn were much lower this
+ time and hovered around the lower Bradley criteria of 0.025 with results
+ of 0.0272 from two-stage experiment 7, 0.0196 from experiment 8, and 0.0234
+ from experiment 9.
+ The same could not be said for the ANOVA p-value results which were much
+ higher and instead chose to hover around the upper Bradley criteria of
+ 0.075 with p-values of 0.0696, 0.065, 0.0628 from experiments 7,8, and 9 respective
+ly.
+ Overall, experiment 5 and 6 provied to have the most signifcant disparity
+ which might be attributed by the uniform distribution being drawn from
+ a standard deviation of 4.
 \end_layout
 
 \begin_layout Standard
@@ -2260,10 +2361,6 @@ name "tab:exp set 2"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -2276,6 +2373,14 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename R-code/sampleSamplesFigure.png
+	scale 70
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2294,15 +2399,86 @@ name "fig:Same-Sample-Sizes"
 
 \end_layout
 
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename R-code/sampleSamplesFigure.png
-	scale 70
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Increasing the amount of condition variables in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ with respect to the inclusion of combinations containing both varying sample
+ sizes and standard deviations among each distribution.
+ Despite all these constraints, both the ANOVA and two-stage tests performed
+ similarly even in situations where they fell outside the Bradley criteria.
+ Notably, experiment 9 which contained a uniform distribution with a standard
+ deviation of 4 and sample size 20, a normal distribution with standard
+ deviation 2 and sample size 30, and a mixed-normal distribution with standard
+ deviation 1 and sample size 20.
+ This concluded in p-values of 0.1218 for the two-stage and 0.1244 for the
+ ANOVA, the performance of both tests is reflected in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Combo-Size-SD"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ which indicates minimal disparity between error rates unlike seen in previous
+ instances like the results throughout Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Same-Sample-Sizes"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Results remain consistent in experiment 8 which utilized a uniform distribution
+ with standard deviation 4 and sample size 20, a normal distribution with
+ standard deviation 2 and sample size 30, and a mixed-normal distribution
+ with standard deviation 1 and sample size 10.
+ Although the distance between p-value 0.1205 from the two-stage test and
+ 0.1317 from the ANOVA was seemingly larger than that of experiment 9, the
+ relative similarity in results remains true despite the increase in variables
+ changed.
+ Another outlier is found in experiment 7 with high p-values of 0.1831 and
+ 0.2075 from the two-stage and ANOVA tests respectively.
+ These results came from a combination of a uniform distribution containing
+ a standard deviation of 4 and sample size 20, a normal distribution with
+ standard deviation 2 and sample size 20, and a mixed-normal distribution
+ with standard deviation4 and sample size 30.
+ With respect to the results which deviated from the lower bound of the
+ Bradley criteria, experiments 1,2, and 3 demonstrated ANOVA p-values of
+ 0.0152, 0.0146, and 0.015 which all fall under the acceptable error rate of
+ 0.025.
+ It is interesting to note that for every experiment that concluded in outliers
+ from the specified boundaries, the ANOVA p-values either came out on the
+ higher end or on the lower end in comparison to the two-stage.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+set of tests where I keep the population uniform.
+ ex: uniform, uniform.
+ smallest sample size and standard deviation.
+ and then do it again for the largest.
+ largest standard dev that goes with 
 \end_layout
 
 \end_inset
@@ -2320,7 +2496,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="17" columns="6">
+<lyxtabular version="3" rows="13" columns="6">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2551,7 +2727,7 @@ N
 \begin_inset Formula $\sigma=2$
 \end_inset
 
-(s=10)
+, n=10
 \end_layout
 
 \end_inset
@@ -3133,7 +3309,7 @@ M
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3142,7 +3318,7 @@ M
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3155,7 +3331,7 @@ U
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3168,7 +3344,7 @@ N
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3181,7 +3357,7 @@ M
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3190,247 +3366,11 @@ M
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.017
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-13
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-U 
-\begin_inset Formula $\sigma=2$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-14
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-U 
-\begin_inset Formula $\sigma=2$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-15
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-U 
-\begin_inset Formula $\sigma=2$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-16
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+0.017
 \end_layout
 
 \end_inset
@@ -3461,10 +3401,6 @@ name "tab:exp set 3"
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -3474,7 +3410,7 @@ name "tab:exp set 3"
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3509,10 +3445,1120 @@ name "fig:Combo-Size-SD"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+using same distributions but changing the standard deviation and increasing
+ sample size
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Experiment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample 1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample 2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sample 3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ANOVA
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+two-stage
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p-value
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+p-value
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=10$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=30$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0285
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0207
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=10$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=30$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0277
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0191
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=10$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=30$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0202
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0146
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=10$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=30$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0235
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0162
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=10$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=30$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0207
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0196
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=10$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=30$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0236
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0198
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=40$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=60$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0273
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0169
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=40$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+U 
+\begin_inset Formula $n=60$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0324
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0167
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=40$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=60$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0278
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0136
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=40$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+M 
+\begin_inset Formula $n=60$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0290
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0157
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=40$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=60$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0213
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0169
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=20$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=40$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N 
+\begin_inset Formula $n=60$
+\end_inset
+
+ 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0215
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0188
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
