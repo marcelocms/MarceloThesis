@@ -294,7 +294,7 @@ deviations from the assumption of a normally distributed dependent variable.
  Furthermore, the suggestion is made that the use of nonparametric tests
  is not necessary as they may be less precise, lower power, and inaccurate
  when compared to the robustness of the ANOVA when facing multiple violations.
- However, doubt is placed in these previous findings with concers towards
+ However, doubt is placed in these previous findings with concerns towards
  the quality of their samples, and the quality of the random number generators
  they used.
 \end_layout
@@ -320,7 +320,7 @@ The Impact of Sample Non-Normality on ANOVA and Alternative Methods
 
 \begin_layout Standard
 Introduces the notion that several arbitrary conditions can apply when discussin
-g the statistical signifance between the sample and population non-normality.
+g the statistical significance between the sample and population non-normality.
  Researchers can overlook situations when samples may appear to be normal
  in an otherwise non-normal population and vice-versa.
  In effect, this has encouraged the use of a one-way fixed analysis of variance
@@ -356,7 +356,7 @@ The methods used in this study are similar to that of Shmider et al.
 \begin_inset Quotes eld
 \end_inset
 
-regarding non-normality in physcological data: normal, uniform, exponential,
+regarding non-normality in phycological data: normal, uniform, exponential,
  U-quadratic, and Laplace.
 \begin_inset Quotes erd
 \end_inset
@@ -390,7 +390,7 @@ literal "false"
 
 \end_inset
 
- These are constructed through a consideration of the Shapiro-Wilk test
+ These are constructed through a consideration of the Shapiro-Wilkes test
  to check for normality, a Bartlett test or leven test to check for homoscedasti
 city, and a final ANOVA, bootstrap ANOVA, brown-Forythe, Welch and Bootstrap
  James tests
@@ -407,7 +407,7 @@ literal "false"
 
  for pre-testing symmetry.
  The goal of these adaptive tests is to find situations in which traditional
- stastistical tests fail to control the Type 1 error rate.
+ statistical tests fail to control the Type 1 error rate.
 \end_layout
 
 \begin_layout Subsection
@@ -457,7 +457,7 @@ Simulations offer extensive control over the conditions in which to analyze
  principles.
  The extent of these simulations have been created with logical arguments
  in mind in order to observe if the expected p-value of 0.5 is maintained
- under normal, mixed-normal and unfirom distributions.
+ under normal, mixed-normal and uniform distributions.
  that is to say the use of 
 \begin_inset Quotes eld
 \end_inset
@@ -525,9 +525,9 @@ ns, the amount of p-values that meet the previously mentioned criteria is
  the statement is true.
  Otherwise, the function then undergoes a one-way ANOVA test.
  The p-value of the test that is conducted throughout the function is then
- evuluated at printed at the end to give an overview of the error rate over
+ evaluated at printed at the end to give an overview of the error rate over
  the number of trials.
- A seperate algorithm was also created with a focus on the uniform distribution
+ A separate algorithm was also created with a focus on the uniform distribution
  which follows the same steps as previously mentioned.
  
 \end_layout
@@ -597,7 +597,7 @@ noprefix "false"
 
 \end_inset
 
-, the first iteration of exploring these contraints is established by appyling
+, the first iteration of exploring these constraints is established by applying
  varying sample sizes across each distribution used.
  Each experiment had one sample drawn from the uniform distribution, the
  mixed-normal distribution, and the normal distribution while the sample
@@ -637,7 +637,7 @@ and a mixed-normal distribution with
  The process of selecting the same distributions across all 3 samples was
  used in experiment 8 and 9 as well in which experiment 8 drew from normal
  distribution while experiment 9 used the mixed-normal distribution.
- Experiment 8 garned a p-value of 0.0480 for its two-stage procedure while
+ Experiment 8 garnered a p-value of 0.0480 for its two-stage procedure while
  the ANOVA resulted with a p-value of 0.0491.
  Experiment 9 experienced similar results with its mixed-normal distributions
  despite variations of sample sizes 
@@ -646,7 +646,7 @@ and a mixed-normal distribution with
 
  in samples 1, 2, and 3 respectively which concluded in a two-sage p-value
  of 0.0502 and an ANOVA p-value of 0.0508.
- Overall, each test throughout all experiments fell within the ounds of
+ Overall, each test throughout all experiments fell within the sounds of
  an approximate p-value of 0.05.
  This is further exemplified in figure 
 \begin_inset CommandInset ref
@@ -659,7 +659,7 @@ noprefix "false"
 \end_inset
 
  in which the respective p-values of each test have minimal deviations from
- eachother and none indicate signficant having outliers that fall outside
+ each-other and none indicate significant having outliers that fall outside
  the Bradley criteria.
 \end_layout
 
@@ -669,7 +669,7 @@ status open
 
 \begin_layout Plain Layout
 for each of 1,5,6,8,9.
- Write down what the values were and what the popluations were.
+ Write down what the values were and what the populations were.
  what population is causing large or small p values.
  Add several sentences describing everyting in words mention the bradley
  criteria..
@@ -1555,21 +1555,21 @@ ly with a uniform distribution of standard deviation 2, a normal distribution
  Once more in experiment 4, the stark contrast between tests is established
  with a lower two-stage p-value of 0.0358 as opposed to the ANOVA with a
  0.0626 p-value.
- Altough there have been an increase in signicant gaps between the resulting
+ Although there have been an increase in significant gaps between the resulting
  p-values , they have not yet fallen outside the specified Bradley criteria
- which emphasizes that error rates should be maintianed between values of
+ which emphasizes that error rates should be maintained between values of
  0.075 and 0.025.
- Experiment 5 is the first instance that demonstrates the largest anomoly
+ Experiment 5 is the first instance that demonstrates the largest anomaly
  between the ANOVA and two-stage tests through the use of a uniform distribution
  of standard deviation 2 in sample 1, a normal distribution of standard
  deviation 1 in sample 2, and a mixed-normal distribution of standard deviation
  4 in sample 3 which resulted in an ANOVA p-value of 0.0670 compared to the
  much larger p-value of 0.1342 from the two-stage.
- Exeriment 6 continues to reflect this through a high two-stage result of
- 0.1445 while the ANOVA p-value was much less resulting in 0.0703, both of
- these values stem from a combination of a uniform distribution with standard
- deviation 4, a normal distribution with standard deviation 2, and a mixed-norma
-l distribution with standard deviation 1.
+ Experiment 6 continues to reflect this through a high two-stage result
+ of 0.1445 while the ANOVA p-value was much less resulting in 0.0703, both
+ of these values stem from a combination of a uniform distribution with
+ standard deviation 4, a normal distribution with standard deviation 2,
+ and a mixed-normal distribution with standard deviation 1.
  The two stage p-values in experiments 7-9 in turn were much lower this
  time and hovered around the lower Bradley criteria of 0.025 with results
  of 0.0272 from two-stage experiment 7, 0.0196 from experiment 8, and 0.0234
@@ -1578,7 +1578,7 @@ l distribution with standard deviation 1.
  higher and instead chose to hover around the upper Bradley criteria of
  0.075 with p-values of 0.0696, 0.065, 0.0628 from experiments 7,8, and 9 respective
 ly.
- Overall, experiment 5 and 6 provied to have the most signifcant disparity
+ Overall, experiment 5 and 6 provided to have the most significant disparity
  which might be attributed by the uniform distribution being drawn from
  a standard deviation of 4.
 \end_layout
@@ -3406,7 +3406,7 @@ name "tab:exp set 3"
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
