@@ -574,16 +574,47 @@ noprefix "false"
 
 \end_inset
 
- contained simulations drawn from a population of 10,000.
- Then, distinct test cases applied to a two-stage procedure, and an analysis
- of variance (ANOVA) were used in order to test the robustness of each test
- under different constraints.
- All experiments utilized variations of a normal, mix-normal, and uniform
- distributions which were used as additional alternatives to measure differences
- in p-values across a two-sage and ANOVA test.
- The Bradley criteria established the 0.075 and 0.025 boundaries throughout
- the figures as a means of denoting the performance of the two-stage and
- ANOVA procedure.
+ contained simulations drawn from a iterations of 10,000.
+ Different test cases were used to test the robustness of the two-stage
+ procedure and the analysis of variance.
+ All experiments utilized variations of normal, mix-normal, and uniform
+ distributions and measured the differences in error rates.
+ The Bradley criteria established the 0.025 and 0.075 boundaries throughout
+ the figures as a means of denoting the boundaries of robustness and comparing
+ the performance of the two-stage and ANOVA procedure.
+ 
+\end_layout
+
+\begin_layout Standard
+In the tables, the normal distribution is denoted with an N, the mixed-normal
+ distribution is denoted with an M, and the uniform distribution is denoted
+ with a U.
+ The Greek letter 
+\begin_inset Formula $\sigma$
+\end_inset
+
+is used for population standard deviation, and 
+\begin_inset Formula $n$
+\end_inset
+
+represents the sample size.
+ 
+\end_layout
+
+\begin_layout Section
+Constant Variance and Different Sample Sizes
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+make sure to change p-values from results to error rate or type 1 experimental
+ rate.
+ Or nominal type 1 error rate
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -603,51 +634,59 @@ noprefix "false"
  mixed-normal distribution, and the normal distribution while the sample
  sizes across each experiment were 10, 20, 30.
  It is important to note that a standard deviation of 1 remained consistent
- throughout all the experiments.
+ throughout all the experiment in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:exp set 1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
  Experiment 1 draws from a uniform distribution with sample size 10, a normal
  distribution with sample size 20, and a mixed-normal distribution with
- sample size 30 which resulted in p-values of 0.0604 and 0.0513 from the two-stage
- procedure and ANOVA respectively.
- Similar results stem from experiment 2 which determined p-values of 0.0528
- from the two-stage and 0.0513 from the ANOVA across a uniform distribution
+ sample size 30 which resulted in error rates of 0.0604 and 0.0513 from the
+ two-stage procedure and ANOVA respectively.
+ Similar results stem from experiment 2 which determined error rates of
+ 0.0528 from the two-stage and 0.0513 from the ANOVA across a uniform distribution
  of sample size 10, a mixed-normal distribution with sample size 20, and
  a normal distribution of sample size 30.
- Experiment 3 used a combination of a normal distribution with sample size
- 10 (
-\begin_inset Formula $n=10)$
+ Experiment 3 used a combination of a normal distribution with 
+\begin_inset Formula $n=10$
 \end_inset
 
 , a uniform distribution with 
 \begin_inset Formula $n=20,$
 \end_inset
 
-and a mixed-normal distribution with 
+, and a mixed-normal distribution with 
 \begin_inset Formula $n=30$
 \end_inset
 
- which determined a two-stage p-value of 0.0518 and an ANOVA p-value of 0.0573.
- This trend of approximate p-values hovering around 0.05 with minimal deviations
- from each two-stage procedure and ANOVA is consistent up until experiment
- 6 which is the point at which the combinations of norma distributions,
- mixed-normal distributions, and uniform distributions with varying sample
- sizes ceases.
- Experiment 7 considers uniform distributions across all 3 samples each
- with a sample size of 10,20, and 30 respectively which resulted in a two-stage
- p-value of 0.0508 and an ANOVA p-value of 0.0533.
- The process of selecting the same distributions across all 3 samples was
- used in experiment 8 and 9 as well in which experiment 8 drew from normal
- distribution while experiment 9 used the mixed-normal distribution.
- Experiment 8 garnered a p-value of 0.0480 for its two-stage procedure while
- the ANOVA resulted with a p-value of 0.0491.
+ which determined a two-stage error rate of 0.0518 and an ANOVA error rate
+ of 0.0573.
+ This trend of approximate type 1 experimental rates hovering around 0.05
+ with minimal deviations from each two-stage procedure and ANOVA is consistent
+ up until experiment 6 which is the point at which the combinations of normal
+ distributions, mixed-normal distributions, and uniform distributions with
+ varying sample sizes ceases.
+ Experiment 7 considers uniform distributions across all three samples each
+ with a sample size of 10, 20, and 30 respectively which resulted in a two-stage
+ error rate of 0.0508 and an ANOVA error rate of 0.0533.
+ The process of selecting the same distributions across all three samples
+ was used in experiment 8 and 9 as well in which experiment 8, experiment
+ 8 garnered a error rate of 0.0480 for its two-stage procedure while the
+ ANOVA resulted with a error rate of 0.0491.
  Experiment 9 experienced similar results with its mixed-normal distributions
  despite variations of sample sizes 
 \begin_inset Formula $n=10,n=20,n=30$
 \end_inset
 
- in samples 1, 2, and 3 respectively which concluded in a two-sage p-value
- of 0.0502 and an ANOVA p-value of 0.0508.
- Overall, each test throughout all experiments fell within the sounds of
- an approximate p-value of 0.05.
+ in samples 1, 2, and 3 respectively which concluded in a two-stage nominal
+ type 1 error rate of 0.0502 and an ANOVA nominal type 1 error rate of 0.0508.
+ Overall, each test throughout all experiments fell within the bounds of
+ an approximate error rate of 0.05.
  This is further exemplified in figure 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -658,9 +697,9 @@ noprefix "false"
 
 \end_inset
 
- in which the respective p-values of each test have minimal deviations from
- each-other and none indicate significant having outliers that fall outside
- the Bradley criteria.
+ in which the respective error rates of each test have minimal deviations
+ from each-other and none have type 1 error rates that fall outside the
+ Bradley criteria.
 \end_layout
 
 \begin_layout Standard
@@ -685,27 +724,6 @@ for each of 1,5,6,8,9.
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Applied same standard deviations, but varied sample sizes across 3 samples
- drawn from a normal, uniform, and mix-normal distribution.
- 
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:exp set 1"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -857,7 +875,7 @@ U
 \begin_inset Text
 
 \begin_layout Plain Layout
-norm 
+N 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -870,7 +888,7 @@ norm
 \begin_inset Text
 
 \begin_layout Plain Layout
-mixed norm 
+M 
 \begin_inset Formula $n=30$
 \end_inset
 
@@ -912,7 +930,7 @@ mixed norm
 \begin_inset Text
 
 \begin_layout Plain Layout
-unif 
+U 
 \begin_inset Formula $n=10$
 \end_inset
 
@@ -925,7 +943,7 @@ unif
 \begin_inset Text
 
 \begin_layout Plain Layout
-mix 
+M 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -938,7 +956,7 @@ mix
 \begin_inset Text
 
 \begin_layout Plain Layout
-norm n = 30
+N n = 30
 \end_layout
 
 \end_inset
@@ -989,7 +1007,7 @@ N
 \begin_inset Text
 
 \begin_layout Plain Layout
-unif 
+U 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -1002,7 +1020,7 @@ unif
 \begin_inset Text
 
 \begin_layout Plain Layout
-mix 
+M 
 \begin_inset Formula $n=30$
 \end_inset
 
@@ -1044,7 +1062,7 @@ mix
 \begin_inset Text
 
 \begin_layout Plain Layout
-norm 
+N 
 \begin_inset Formula $n=10$
 \end_inset
 
@@ -1057,7 +1075,7 @@ norm
 \begin_inset Text
 
 \begin_layout Plain Layout
-mix 
+M 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -1070,7 +1088,7 @@ mix
 \begin_inset Text
 
 \begin_layout Plain Layout
-unif 
+U 
 \begin_inset Formula $n=30$
 \end_inset
 
@@ -1125,7 +1143,7 @@ M
 \begin_inset Text
 
 \begin_layout Plain Layout
-norm 
+N 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -1138,7 +1156,7 @@ norm
 \begin_inset Text
 
 \begin_layout Plain Layout
-unif 
+U 
 \begin_inset Formula $n=30$
 \end_inset
 
@@ -1180,7 +1198,7 @@ unif
 \begin_inset Text
 
 \begin_layout Plain Layout
-mix 
+M 
 \begin_inset Formula $n=10$
 \end_inset
 
@@ -1193,7 +1211,7 @@ mix
 \begin_inset Text
 
 \begin_layout Plain Layout
-unif 
+U 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -1206,7 +1224,7 @@ unif
 \begin_inset Text
 
 \begin_layout Plain Layout
-norm 
+N 
 \begin_inset Formula $n=30$
 \end_inset
 
@@ -1248,7 +1266,7 @@ norm
 \begin_inset Text
 
 \begin_layout Plain Layout
-unif 
+U 
 \begin_inset Formula $n=10$
 \end_inset
 
@@ -1261,7 +1279,7 @@ unif
 \begin_inset Text
 
 \begin_layout Plain Layout
-unif 
+U 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -1274,7 +1292,7 @@ unif
 \begin_inset Text
 
 \begin_layout Plain Layout
-unif 
+U 
 \begin_inset Formula $n=30$
 \end_inset
 
@@ -1316,7 +1334,7 @@ unif
 \begin_inset Text
 
 \begin_layout Plain Layout
-norm 
+N 
 \begin_inset Formula $n=10$
 \end_inset
 
@@ -1329,7 +1347,7 @@ norm
 \begin_inset Text
 
 \begin_layout Plain Layout
-norm 
+N 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -1342,7 +1360,7 @@ norm
 \begin_inset Text
 
 \begin_layout Plain Layout
-norm 
+N 
 \begin_inset Formula $n=30$
 \end_inset
 
@@ -1397,7 +1415,7 @@ M
 \begin_inset Text
 
 \begin_layout Plain Layout
-mixed norm 
+M 
 \begin_inset Formula $n=20$
 \end_inset
 
@@ -1410,7 +1428,7 @@ mixed norm
 \begin_inset Text
 
 \begin_layout Plain Layout
-mixed norm 
+M 
 \begin_inset Formula $n=30$
 \end_inset
 
@@ -1446,6 +1464,28 @@ mixed norm
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+In these sets of experiments, applied same standard deviations, but varied
+ sample sizes across three samples drawn from a normal, uniform, and mix-normal
+ distributions.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:exp set 1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1459,6 +1499,17 @@ mixed norm
 wide false
 sideways false
 status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename R-code/difSamplesFigure.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1480,23 +1531,16 @@ name "fig:Diff-Sample-Sizes"
 \end_layout
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename R-code/difSamplesFigure.png
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Same Sample Sizes and Different Standard Deviations
 \end_layout
 
 \begin_layout Standard
@@ -1510,8 +1554,8 @@ noprefix "false"
 
 \end_inset
 
-, which indicate a more drastic juxtaposition between the respective p-values
- of the two-stage vs ANOVA.
+, which indicate a more drastic juxtaposition between the respective error
+ rates of the two-stage vs ANOVA.
  The sample size used remained as 
 \begin_inset Formula $n=20$
 \end_inset
@@ -1519,8 +1563,8 @@ noprefix "false"
  for all experiments, but included variations in the standard deviation
  within each distribution.
  Using standard deviations ranging from 1, 2, and 4 through normal, mix-normal,
- and uniform distributions widened the difference in p-values unlike seen
- in Table 
+ and uniform distributions widened the difference in error rates unlike
+ seen in Table 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "tab:exp set 1"
@@ -1532,52 +1576,49 @@ noprefix "false"
 
 .
  Consider experiment 1 in which sample 1 drew from a uniform distribution
- with standard deviation 1(
-\begin_inset Formula $\sigma=1)$
-\end_inset
-
-, sample 2 from a normal distribution with standard deviation 2, and sample
- 3 from a mixed-normal distribution with standard deviation 4.
- This resulted in a two-stage procedure containing a drastic p-value of
- 0.0231 compared to the ANOVA with a 0.0633 p-value.
- This is a notable difference to the previous trend of p-values with minimal
- deviations from the standard expected error rate of 0.05, in this case,
- the two-stage value falls just outside the explicit boundaries of the Bradley
- criteria.
- A similar result of a small two-stage p-value is followed in experiment
+ with standard deviation 1, sample 2 from a normal distribution with standard
+ deviation 2, and sample 3 from a mixed-normal distribution with standard
+ deviation 4.
+ This resulted in a two-stage procedure containing a drastic error rate
+ of 0.0231 compared to the ANOVA with a 0.0633 error rate.
+ This is a notable difference to the previous trend of type 1 experimental
+ rates with minimal deviations from the standard expected error rate of
+ 0.05, in this case, the two-stage value falls just outside the explicit
+ boundaries of the Bradley criteria.
+ A similar result of a small two-stage error rate is followed in experiment
  2 which contained a value of 0.0287 while the ANOVA had a much higher result
- of a 0.0704 p-value.
- Unlike the previous tests so far, experiment 3 demonstrated a closer p-value
- relationship with 0.0537 and 0.0681 values for the two-stage and ANOVA respective
-ly with a uniform distribution of standard deviation 2, a normal distribution
- of standard deviation 4, and a mixed-normal distribution of standard deviation
- 1.
+ of a 0.0704 error rate.
+ Unlike the previous tests so far, experiment 3 demonstrated a closer nominal
+ type 1 error rate relationship with 0.0537 and 0.0681 values for the two-stage
+ and ANOVA respectively with a uniform distribution of standard deviation
+ 2, a normal distribution of standard deviation 4, and a mixed-normal distributi
+on of standard deviation 1.
  Once more in experiment 4, the stark contrast between tests is established
- with a lower two-stage p-value of 0.0358 as opposed to the ANOVA with a
- 0.0626 p-value.
+ with a lower two-stage error rate of 0.0358 as opposed to the ANOVA with
+ a 0.0626 error rate.
  Although there have been an increase in significant gaps between the resulting
- p-values , they have not yet fallen outside the specified Bradley criteria
+ error rates, they have not yet fallen outside the specified Bradley criteria
  which emphasizes that error rates should be maintained between values of
  0.075 and 0.025.
  Experiment 5 is the first instance that demonstrates the largest anomaly
  between the ANOVA and two-stage tests through the use of a uniform distribution
  of standard deviation 2 in sample 1, a normal distribution of standard
  deviation 1 in sample 2, and a mixed-normal distribution of standard deviation
- 4 in sample 3 which resulted in an ANOVA p-value of 0.0670 compared to the
- much larger p-value of 0.1342 from the two-stage.
+ 4 in sample 3 which resulted in an ANOVA error rate of 0.0670 compared to
+ the much larger error rate of 0.1342 from the two-stage.
  Experiment 6 continues to reflect this through a high two-stage result
- of 0.1445 while the ANOVA p-value was much less resulting in 0.0703, both
+ of 0.1445 while the ANOVA error rate was much less resulting in 0.0703, both
  of these values stem from a combination of a uniform distribution with
  standard deviation 4, a normal distribution with standard deviation 2,
  and a mixed-normal distribution with standard deviation 1.
- The two stage p-values in experiments 7-9 in turn were much lower this
+ The two stage error rates in experiments 7-9 in turn were much lower this
  time and hovered around the lower Bradley criteria of 0.025 with results
  of 0.0272 from two-stage experiment 7, 0.0196 from experiment 8, and 0.0234
  from experiment 9.
- The same could not be said for the ANOVA p-value results which were much
- higher and instead chose to hover around the upper Bradley criteria of
- 0.075 with p-values of 0.0696, 0.065, 0.0628 from experiments 7,8, and 9 respective
-ly.
+ The same could not be said for the ANOVA error rates results which were
+ much higher and instead chose to hover around the upper Bradley criteria
+ of 0.075 with error rates of 0.0696, 0.065, 0.0628 from experiments 7, 8, and
+ 9 respectively.
  Overall, experiment 5 and 6 provided to have the most significant disparity
  which might be attributed by the uniform distribution being drawn from
  a standard deviation of 4.
@@ -2370,7 +2411,7 @@ name "tab:exp set 2"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2423,8 +2464,8 @@ noprefix "false"
  deviation of 4 and sample size 20, a normal distribution with standard
  deviation 2 and sample size 30, and a mixed-normal distribution with standard
  deviation 1 and sample size 20.
- This concluded in p-values of 0.1218 for the two-stage and 0.1244 for the
- ANOVA, the performance of both tests is reflected in Figure 
+ This concluded in error rates of 0.1218 for the two-stage and 0.1244 for
+ the ANOVA, the performance of both tests is reflected in Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Combo-Size-SD"
@@ -2450,23 +2491,23 @@ noprefix "false"
  with standard deviation 4 and sample size 20, a normal distribution with
  standard deviation 2 and sample size 30, and a mixed-normal distribution
  with standard deviation 1 and sample size 10.
- Although the distance between p-value 0.1205 from the two-stage test and
- 0.1317 from the ANOVA was seemingly larger than that of experiment 9, the
- relative similarity in results remains true despite the increase in variables
- changed.
- Another outlier is found in experiment 7 with high p-values of 0.1831 and
- 0.2075 from the two-stage and ANOVA tests respectively.
+ Although the distance between the error rate of 0.1205 from the two-stage
+ test and 0.1317 from the ANOVA was seemingly larger than that of experiment
+ 9, the relative similarity in results remains true despite the increase
+ in variables changed.
+ Another instance is found in experiment 7 with high error rates of 0.1831
+ and 0.2075 from the two-stage and ANOVA tests respectively.
  These results came from a combination of a uniform distribution containing
  a standard deviation of 4 and sample size 20, a normal distribution with
  standard deviation 2 and sample size 20, and a mixed-normal distribution
- with standard deviation4 and sample size 30.
+ with standard deviation 4 and sample size 30.
  With respect to the results which deviated from the lower bound of the
- Bradley criteria, experiments 1,2, and 3 demonstrated ANOVA p-values of
- 0.0152, 0.0146, and 0.015 which all fall under the acceptable error rate of
- 0.025.
+ Bradley criteria, experiments 1,2, and 3 demonstrated ANOVA error rates
+ of 0.0152, 0.0146, and 0.015 which all fall under the acceptable error rate
+ of 0.025.
  It is interesting to note that for every experiment that concluded in outliers
- from the specified boundaries, the ANOVA p-values either came out on the
- higher end or on the lower end in comparison to the two-stage.
+ from the specified boundaries, the ANOVA error rates either came out on
+ the higher end or on the lower end in comparison to the two-stage.
 \end_layout
 
 \begin_layout Standard
@@ -3410,7 +3451,7 @@ name "tab:exp set 3"
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -3444,24 +3485,132 @@ name "fig:Combo-Size-SD"
 
 \end_layout
 
+\begin_layout Section*
+Same Distributions but Different Sample Sizes and Standard Deviations
+\end_layout
+
+\begin_layout Standard
+In order to account for additional test cases, use of consistent uniform,
+ normal, and mixed-normal distributions throughout each experiment allowed
+ the exploration of accounting for performance in situations where the previousl
+y used sample size was increased along with varations with respect to the
+ standard deviations.
+ Overall, each experiment performed poorly with low error rates across all
+ combinations used.
+ Additionally, most data points fall outside the lower end of the Bradley
+ Criteria which has been previously used as a metric to determine the robustness
+ of performance among each ANOVA and two-stage test.
+ Experiments 1 and 2 utilize uniform distributions across the three samples
+ but vary in combinations of the sample size and standard deviation.
+ Experiment 1 established a slightly higher ANOVA error rate of 0.0285 in
+ comparison to the two-stage error rate of 0.0207, both these values were
+ drawn from sample 1 containing a sample size of 10 and standard deviation
+ of 1, sample 2 containing a sample size of 20 and standard deviation of
+ 2, and sample 3 containing a sample size of 30 and a standard deviation
+ of 4.
+ Experiment 2 denotes a similar trend with sample size 10, 20, and 30 and
+ standard deviation 4, 2, and 1 for samples 1, 2, and 3 respectively.
+ This resulted in a lower two-stage error rate of 0.0191 which the ANOVA
+ performed higher yet again with an error rate of 0.0277.
+ Experiment 7 and 8 also use uniform distributions across all samples, however,
+ the sample size is increased in these new test cases from 10 to 20, 20
+ to 40, and 30 to 60 for each sample.
+ Experiment 7 was able to draw a two-stage error rate of 0.0167 while the
+ ANOVA error rate remained higher at 0.0273, these results were created from
+ a sample size of 20 and standard deviation 1, sample size of 40 and standard
+ deviation 2, and sample size of 60 and standard deviation 4.
+ It is important to note experiment 7 performed similar to experiment 1
+ with the exception of having wider distance between the two error rates.
+ Experiment 8 has the widest distance of these error rates with combinations
+ of 
+\begin_inset Formula $n=20$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+, 
+\begin_inset Formula $n=40$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma=2,$
+\end_inset
+
+ and 
+\begin_inset Formula $n=60$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+ which resulted in a two-stage error rate of 0.0167 and an ANOVA error rate
+ of 0.0324.
+ Another trend to note is that of the ANOVA error rates which remain higher
+ across all experiments and have instances in which they slightly maintain
+ themselves above the 0.025 criterion.
+ Experiment 3 uses a mixed-normal distribution across all three samples
+ with combinations of 
+\begin_inset Formula $n=10$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma=$
+\end_inset
+
+1, 
+\begin_inset Formula $n=20$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+, and 
+\begin_inset Formula $n=30$
+\end_inset
+
+with 
+\begin_inset Formula $\sigma=4$
+\end_inset
+
+ which resulted in a two-stage error rate of 0.0146 and an ANOVA error rate
+ of 0.0277.
+ Experiment 4 experienced error rates of 0.0162 and 0.0235 for the two-stage
+ and ANOVA respectively while being drawn from sample combinations of 
+\begin_inset Formula $n=10$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+, 
+\begin_inset Formula $n=20$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma=2$
+\end_inset
+
+, and 
+\begin_inset Formula $n=30$
+\end_inset
+
+ with 
+\begin_inset Formula $\sigma=$
+\end_inset
+
+1.
+\end_layout
+
 \begin_layout Standard
 \begin_inset Float table
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-using same distributions but changing the standard deviation and increasing
- sample size
-\end_layout
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -4554,6 +4703,19 @@ N
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+using same distributions but changing the standard deviation and increasing
+ sample size
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -4563,6 +4725,41 @@ N
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename R-code/sameDist.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Test cases using same distributions while increasing variations of sample
+ size per standard deviation.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
