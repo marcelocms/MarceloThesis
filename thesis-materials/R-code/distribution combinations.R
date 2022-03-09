@@ -1,3 +1,5 @@
+library(LaplacesDemon)
+
 sigma <- c(sqrt(0.75), sqrt(13.25))
 p <- c(0.98, 0.02)
 mu <- c(0,0)
@@ -21,11 +23,10 @@ x1 = rnormm(n, p, mu, sigma)
 sd(x1)
 mean(x1)
 
-boxplot(x1)
-hist(x1, breaks = 100)
-n1 = 10
-n2 = 20
-n3 = 30
+
+n1 = 20
+n2 = 40
+n3 = 60
 seq_a = rep("a",n1)
 seq_b = rep("b",n2)
 seq_c = rep("c", n3)
@@ -39,9 +40,10 @@ for(i in 1:10000) {
   
   #s1 = rnormm(n1, p, mu, sigma)
   #s1= rnorm(n1,0,1)
-  s1 = runif(n3,-sqrt(3),sqrt(3))
-  s2 = rnorm(n1,0,4)
-  s3 = rnormm(n2, p, mu, sigma2)
+  
+  s1= rnorm(n3,0,1)
+  s2= rnorm(n2,0,2)
+  s3= rnorm(n1,0,4)
   #s2 = rnormm(n1, p, mu, sigma)
   #s3 = rnormm(n3, p, mu, sigma)
   #s3 = runif(n2,-sqrt(3),sqrt(3))

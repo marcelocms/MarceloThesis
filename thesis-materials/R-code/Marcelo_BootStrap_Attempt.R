@@ -1,23 +1,6 @@
 library(LaplacesDemon)
-
-sigma <- c(sqrt(0.75), sqrt(13.25))
-p <- c(0.98, 0.02)
-mu <- c(0,0)
-
-sigma2 <- c(sqrt(3), sqrt(53))
-p <- c(0.98, 0.02)
-mu <- c(0,0)
-s2 = rnormm(100000, p, mu, sigma)
-mean(s2)
-sd(s2)
-
-sigma4 <- c(sqrt(12), sqrt(212))
-p <- c(0.98, 0.02)
-mu <- c(0,0)
-s2 = rnormm(100000, p, mu, sigma)
-mean(s2)
-sd(s2)
-
+n = 1000 #number of bootstrap resamples
+set.seed(42) # for reproducibility
 n1=20
 n2=40
 n3=60
@@ -39,9 +22,8 @@ for(i in 1:10000) {
   #s3 = rnormm(n2,p,mu,sigma2)
   nums= c(s1, s2, s3)
   
-  results = onew
-  ay.test(nums ~ sequence, var.equal = TRUE)
-  pvalue = results[[3]]
+
+  pvalue = # mean( Boot.test.stat >= F.stat)
   if(pvalue <= 0.05){
     error = error +1
   }
@@ -49,3 +31,17 @@ for(i in 1:10000) {
 }
 
 error/totalTrials
+
+# Code to use as a foundation/integrate into function
+
+
+
+anova_test <- function(d, i){ #first argument is passing the data set
+  # second argument could be an index of the observations within the data set
+}
+
+#Loop over n
+
+for (i in seq_len(n)) {
+  bootanova <- aov(x ~ y)
+}
